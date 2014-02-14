@@ -1,0 +1,18 @@
+ext {
+    libraries = [:]
+}
+
+def libDir = 'lib'
+
+libraries.whiley_all = fileTree(dir: libDir, include: '*.jar')
+
+libraries.jasm = files("$libDir/jasm-v0.1.1.jar")
+libraries.wybs = files("$libDir/wybs-v${version}.jar")
+libraries.wycc = files("$libDir/wycc-v${version}.jar")
+libraries.wycs = files("$libDir/wycs-v${version}.jar")
+libraries.wyc = files("$libDir/wyc-v${version}.jar")
+libraries.wyil = files("$libDir/wyil-v${version}.jar")
+libraries.wyjc = files("$libDir/wyjc-v${version}.jar")
+libraries.wyrl = files("$libDir/wyrl-v${version}.jar")
+libraries.wyrt = files("$libDir/wyrt-v${version}.jar")
+
