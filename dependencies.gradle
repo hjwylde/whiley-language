@@ -4,7 +4,8 @@ ext {
 
 def libDir = 'lib'
 
-libraries.whiley_all = fileTree(dir: libDir, include: '*.jar')
+//libraries.whiley_all = fileTree(dir: libDir, include: '*.jar')
+libraries.whiley_all = files("$libDir/wyjc-all-v${version}.jar")
 
 libraries.jasm = files("$libDir/jasm-v0.1.1.jar")
 libraries.wybs = files("$libDir/wybs-v${version}.jar")
