@@ -20,6 +20,7 @@ defaultTasks 'install'
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'signing'
     apply plugin: 'maven'
 
     defaultTasks 'install'
@@ -27,6 +28,22 @@ subprojects {
     jar {
         from {
             configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        }
+    }
+
+    signing {
+        sign configurations.archives
+    }
+
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                repository(url: uri('/home/hjwylde/git/maven-repository/repository'))
+
+                beforeDeployment {
+                    MavenDeployment deployment -> signing.signPom(deployment)
+                }
+            }
         }
     }
 }
