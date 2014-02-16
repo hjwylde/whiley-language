@@ -1,13 +1,9 @@
 apply from: 'dependencies.gradle'
 
-defaultTasks 'install'
-
 subprojects {
     apply plugin: 'java'
     apply plugin: 'signing'
     apply plugin: 'maven'
-
-    defaultTasks 'install'
 
     jar {
         from {
