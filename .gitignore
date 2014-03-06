@@ -2,16 +2,3 @@
 .gradle/
 build/
 
-# Java files
-*.class
-*.war
-
-# Eclipse files
-.classpath
-.project
-.settings/
-
-# Generated files
-bin/
-gen/
-
