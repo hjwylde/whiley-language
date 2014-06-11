@@ -6,7 +6,7 @@ def libDir = 'lib'
 
 libraries.whiley_all = files("$libDir/wyjc-all-v${version}.jar")
 
-libraries.jasm = files("$libDir/jasm-v0.1.1.jar")
+libraries.jasm = files("$libDir/jasm-v0.1.4.jar")
 libraries.wybs = files("$libDir/wybs-v${version}.jar")
 libraries.wycc = files("$libDir/wycc-v${version}.jar")
 libraries.wycs = files("$libDir/wycs-v${version}.jar")
